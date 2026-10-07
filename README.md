@@ -1,43 +1,48 @@
-# Hi there! I'm Rickard 
+# Hi there! I'm Rickard
 
-Data Engineering student at STI (2025–2027) with a background in operations and team leadership. I build ETL pipelines, data platforms and medallion architectures with a focus on data integrity, automation and scalability.
+Data Engineering student at STI (2025–2027), looking for a LIA internship 11 January – 28 May 2027 in the Stockholm area.
+
+Before studying I spent 15 years at Citymail Sweden AB [CHECK: use the same title as in the LinkedIn post], where a wrong address or register has real consequences. That is a big part of why I want data to be right from the start.
 
 ## Stack
 
-**Languages:** Python (Pandas, OOP) · SQL (Advanced, CTEs)  
-**Databases:** PostgreSQL · DuckDB  
-**Platforms & Tools:** Databricks · PySpark · Delta Live Tables · Apache Kafka · Docker · FastAPI · Git  
-**Modeling:** ER-modeling · 3NF Normalization · Dimensional modeling  
-**BI:** PowerBI · Streamlit · Evidence.dev  
+- **Languages:** Python (Pandas, OOP) · SQL (CTEs) · dbt · dlt
+- **Cloud & Infrastructure:** Azure · Terraform · Docker
+- **Data Platforms:** Databricks · Delta Live Tables · PySpark · Snowflake · Apache Kafka
+- **Databases:** PostgreSQL · DuckDB
+- **Backend & APIs:** FastAPI · REST
+- **Modeling:** ER-modeling · 3NF Normalization · Dimensional modeling · Medallion architecture
+- **BI:** Power BI · Streamlit · Evidence.dev
+- **Practices:** Git · GitHub Actions · pytest · Agile/Scrum
 
 ## Projects
 
+### [eClipseBord](https://github.com/rickard-garnau/azure_python_fullstack_lab)
+Fullstack app for analysis and visualization of solar and lunar eclipses, based on NASA's Five Millennium Catalogs.
+
+- FastAPI backend and Streamlit frontend as separate services
+- Containerized with Docker, deployed to Azure with Terraform (Container App and Web App)
+- Error handling for failed API calls, backend URL controlled via environment variable
+
 ### [Marathos Lab](https://github.com/rickard-garnau/marathos_rickard_garnau)
-End-to-end medallion pipeline on Databricks for 7.4M ultra marathon results (1798–2022).
+Medallion pipeline on Databricks for ultra marathon results (7.4M rows, 1990–2022).
 
 - Streaming ingestion via Delta Live Tables into bronze
-- 20+ silver transformations: unit standardization, date parsing, performance normalization, deduplication
-- Dimensional model in gold: `fct_results`, `dim_athlete`, `dim_event` + analytical views
-- Genie space for ad hoc queries with manual verification notebook
-- Databricks dashboard built on gold views
+- Silver: unit standardization, date parsing, performance normalization [CHECK: deduplication]
+- Dimensional model in gold: `fct_results`, `dim_athlete`, `dim_event` and analytical views
+- Genie space for ad hoc questions, verified manually against SQL
+- Databricks dashboard on the gold views
 
-### FoodHub — Data Platform (FastAPI + Kafka + PostgreSQL + Docker)
-End-to-end data pipeline with Kafka Producer/Consumer for async streaming from Spoonacular API into PostgreSQL (staging → curated). Cache-first strategy to minimize external API calls. ETL with Pydantic validation, NaN-handling and fuzzy ingredient matching. Exposed via FastAPI with search, history and query statistics endpoints. Scrum Master in a team of 5.
+### FoodHub (group project)
+Recipe search platform: FastAPI, Kafka and PostgreSQL in Docker. Kafka producer/consumer streams data from the Spoonacular API into PostgreSQL (staging → curated), with a cache-first strategy to limit external API calls. ETL with Pydantic validation, NaN handling and fuzzy ingredient matching. Scrum Master for half the project [CHECK team size].
 
-### Stock Data Pipeline (FastAPI + PostgreSQL + Docker)
-REST API ingestion of stock data stored as JSONB in PostgreSQL. ELT pipeline with Pandas for cleaning, validation and outlier detection. Flagging and rejection logic for data quality. Credentials via `.env` and containerized with Docker.
+### STHLMs Puls (group project)
+Event guide for Stockholm in Power BI, with a map of venues, charts per genre and weekday, and filters on date and subcategory. Data from Ticketmaster, Visit Stockholm, Berns, Fasching and Google Places, plus weather via API. I built the start page, the performing-arts and nightlife pages, and parts of the data pipeline. Also a Streamlit version.
 
-## Background
+## Contact
 
-15 years as Team Leader at Citymail Sweden AB — responsible for process optimization, flow management and daily KPI delivery across teams of 6–10 people. That background makes me take reliability and edge cases seriously.
-
----
-## Let's talk data. I'm happy to discuss pipeline architecture, medallion design or why your silver layer is lying to you.
-More projects and course work under my repositories.
-
-- LinkedIn: [linkedin](https://www.linkedin.com/in/rickard-garnau-37363b233/)
+- LinkedIn: [Rickard Garnau](https://www.linkedin.com/in/rickard-garnau-37363b233/)
 - Email: rickardgarnau@gmail.com
 - Location: Stockholm
 
-
-*Seeking LIA internship. Open to data engineering roles.*
+More projects and course work under my repositories.
